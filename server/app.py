@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response, jsonify, request
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
 from models import db, Hero, Power, HeroPower
@@ -22,6 +22,7 @@ db.init_app(app)
 @app.route('/')
 def index():
     return '<h1>Code challenge</h1>'
+
 
 
 if __name__ == '__main__':
